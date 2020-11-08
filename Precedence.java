@@ -79,6 +79,9 @@ public class Precedence {
                 }
                 String sentence="";
                 for(int count=j+1;count<=k;count++){
+                    System.out.println("!!!");
+                    System.out.println(stack[count]);
+                    //System.out.println(stack[count]);
                     sentence+=stack[count];
                 }
                 System.out.println(sentence);
