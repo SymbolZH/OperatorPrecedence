@@ -119,5 +119,6 @@ public class Precedence {
         reader.close();
         char buf2[]=new char[length+10];
         new Precedence().execute(buf,buf2);
+        System.out.println("check");
     }
 }
