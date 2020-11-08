@@ -72,6 +72,8 @@ public class Precedence {
                         j=j-2;
                     }
                     if(table[get_index(stack[j])][get_index(tmp)]==2){
+                        System.out.println(stack[j]);
+                        System.out.println(tmp);
                         break;
                     }
                 }
