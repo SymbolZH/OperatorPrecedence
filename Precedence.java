@@ -53,7 +53,7 @@ public class Precedence {
         stack[k]='#';
 
         for (int i = 0; i < input.length-1; i++) {
-            if(get_index(input[i])>5||get_index(input[i])<0){
+            if(get_index(input[i])>6||get_index(input[i])<0){
                 System.out.println("E");
                 return;
             }
@@ -102,7 +102,7 @@ public class Precedence {
                 return;
             }
         }
-        
+
 
     }
     public static void main(String[] args) throws IOException {
