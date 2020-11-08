@@ -89,7 +89,7 @@ public class Precedence {
                     //System.out.println(stack[count]);
                     sentence+=stack[count];
                 }
-                System.out.println(sentence);
+                //System.out.println(sentence);
                 if(is_ok(sentence)){
                     System.out.println("R");
                     k=j+1;
