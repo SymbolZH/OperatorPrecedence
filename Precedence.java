@@ -79,6 +79,7 @@ public class Precedence {
                 for(int count=j+1;count<=k;count++){
                     sentence+=stack[count];
                 }
+                System.out.println(sentence);
                 if(is_ok(sentence)){
                     System.out.println("R");
                     k=j+1;
