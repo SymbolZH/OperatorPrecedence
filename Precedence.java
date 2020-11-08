@@ -34,7 +34,7 @@ public class Precedence {
             }
         }
     }
-    int[][] table={{1,2,2,1,2,1},{1,1,2,1,2,1},{2,2,2,3,2,0},{1,1,0,1,0,1},{1,1,0,1,0,1},{2,2,2,0,2}};
+    int[][] table={{1,2,2,1,2,1},{1,1,2,1,2,1},{2,2,2,3,2,0},{1,1,0,1,0,1},{1,1,0,1,0,1},{2,2,2,0,2,4}};
 
 
 
@@ -89,6 +89,7 @@ public class Precedence {
                     System.out.println("RE");
                     return;
                 }
+
                 judge=table[get_index(stack[j])][get_index(input[i])];
             }
             if(judge==2||judge==3){
@@ -100,6 +101,8 @@ public class Precedence {
                 System.out.println("E");
                 return;
             }
+            if(judge==4)
+                return;
         }
 
 
