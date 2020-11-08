@@ -51,17 +51,15 @@ public class Precedence {
         int k=1,j;
         stack[k]='#';
         for (int i = 0; i < input.length; i++) {
+            if(get_index(input[i])>4||get_index(input[i])<0){
+                System.out.println("E");
+                return;
+            }
             if(get_index(stack[k])>=0&&get_index(stack[k])<=5){
                 j=k;
             }
             else {
-                if (get_index(stack[k]) == 6){
-                    j=k-1;
-                }
-                else {
-                    System.out.println("E1");
-                    return;
-                }
+                j=k-1;
             }
             int judge=table[get_index(stack[j])][get_index(input[i])];
             while (judge==1){
