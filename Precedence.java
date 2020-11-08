@@ -64,6 +64,8 @@ public class Precedence {
             int judge=table[get_index(stack[j])][get_index(input[i])];
             while (judge==1){
                 while (true){
+                    System.out.println("???");
+                    System.out.println(j);
                     char tmp=stack[j];
                     if(stack[j-1]>=0&&stack[j-1]<=5){
                         j=j-1;
