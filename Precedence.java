@@ -59,11 +59,10 @@ public class Precedence {
                     j=k-1;
                 }
                 else {
-                    System.out.println("E20");
+                    System.out.println("E1");
                     return;
                 }
             }
-            System.out.println("I"+stack[j]);
             int judge=table[get_index(stack[j])][get_index(input[i])];
             while (judge==1){
                 while (true){
@@ -99,14 +98,14 @@ public class Precedence {
                 stack[k]=input[i];
             }
             if(judge==0){
-                System.out.println("E");
+                System.out.println("E2");
                 return;
             }
         }
         if(stack[k]=='#')
             return;
         else {
-            System.out.println("E");
+            System.out.println("E3");
             return;
         }
 
