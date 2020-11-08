@@ -49,11 +49,10 @@ public class Precedence {
     }
     private void execute(char[] input,char[] stack){
         int k=1,j;
+        input[input.length-2]='#';
         stack[k]='#';
-        String tmp_input=input.toString();
-        tmp_input+='#';
-        input=tmp_input.toCharArray();
-        for (int i = 0; i < input.length; i++) {
+
+        for (int i = 0; i < input.length-1; i++) {
             if(get_index(input[i])>5||get_index(input[i])<0){
                 System.out.println("E");
                 return;
@@ -103,12 +102,7 @@ public class Precedence {
                 return;
             }
         }
-        if(stack[k]=='#')
-            return;
-        else {
-            System.out.println("E");
-            return;
-        }
+        
 
     }
     public static void main(String[] args) throws IOException {
