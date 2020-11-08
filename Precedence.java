@@ -49,11 +49,10 @@ public class Precedence {
     }
     private void execute(char[] input,char[] stack){
         int k=1,j;
-        input[input.length-2]='#';
         stack[k]='#';
 
         for (int i = 0; i < input.length-1; i++) {
-            if(get_index(input[i])>6||get_index(input[i])<0){
+            if(get_index(input[i])>5||get_index(input[i])<0){
                 System.out.println("E");
                 return;
             }
@@ -112,6 +111,7 @@ public class Precedence {
         char buf[] = new char[length+10];
         reader.read(buf);
         reader.close();
+        buf[length-2]='#';
         char buf2[]=new char[length+10];
         new Precedence().execute(buf,buf2);
         //System.out.println("check");
