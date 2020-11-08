@@ -74,12 +74,15 @@ public class Precedence {
                     if(table[get_index(stack[j])][get_index(tmp)]==2){
                         System.out.println(stack[j]);
                         System.out.println(tmp);
+                        System.out.println(j);
                         break;
                     }
                 }
                 String sentence="";
                 for(int count=j+1;count<=k;count++){
+
                     System.out.println("!!!");
+                    System.out.println(count);
                     System.out.println(stack[count]);
                     //System.out.println(stack[count]);
                     sentence+=stack[count];
