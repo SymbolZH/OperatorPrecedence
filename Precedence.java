@@ -59,7 +59,7 @@ public class Precedence {
                     j=k-1;
                 }
                 else {
-                    System.out.println("E");
+                    System.out.println("E20");
                     return;
                 }
             }
