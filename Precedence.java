@@ -96,14 +96,14 @@ public class Precedence {
                 stack[k]=input[i];
             }
             if(judge==0){
-                System.out.println("E2");
+                System.out.println("E");
                 return;
             }
         }
         if(stack[k]=='#')
             return;
         else {
-            System.out.println("E3");
+            System.out.println("E");
             return;
         }
 
@@ -117,6 +117,6 @@ public class Precedence {
         reader.close();
         char buf2[]=new char[length+10];
         new Precedence().execute(buf,buf2);
-        System.out.println("check");
+        //System.out.println("check");
     }
 }
