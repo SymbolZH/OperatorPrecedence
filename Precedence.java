@@ -34,7 +34,7 @@ public class Precedence {
             }
         }
     }
-    int[][] table={{1,2,2,1,2},{1,1,2,1,2},{2,2,2,3,2},{1,1,0,1,0},{1,1,0,1,0},{2,2,2,0,2}};
+    int[][] table={{1,2,2,1,2,1},{1,1,2,1,2,1},{2,2,2,3,2,0},{1,1,0,1,0,1},{1,1,0,1,0,1},{2,2,2,0,2}};
 
 
 
@@ -50,8 +50,11 @@ public class Precedence {
     private void execute(char[] input,char[] stack){
         int k=1,j;
         stack[k]='#';
+        String tmp_input=input.toString();
+        tmp_input+='#';
+        input=tmp_input.toCharArray();
         for (int i = 0; i < input.length; i++) {
-            if(get_index(input[i])>4||get_index(input[i])<0){
+            if(get_index(input[i])>5||get_index(input[i])<0){
                 System.out.println("E");
                 return;
             }
@@ -64,8 +67,6 @@ public class Precedence {
             int judge=table[get_index(stack[j])][get_index(input[i])];
             while (judge==1){
                 while (true){
-                    //System.out.println("???");
-                    //System.out.println(j);
                     char tmp=stack[j];
                     if(get_index(stack[j-1])>=0&&get_index(stack[j-1])<=5){
                         j=j-1;
@@ -74,22 +75,13 @@ public class Precedence {
                         j=j-2;
                     }
                     if(table[get_index(stack[j])][get_index(tmp)]==2){
-                        //System.out.println(stack[j]);
-                        //System.out.println(tmp);
-                        //System.out.println(j);
                         break;
                     }
                 }
                 String sentence="";
                 for(int count=j+1;count<=k;count++){
-
-                    //System.out.println("!!!");
-                    //System.out.println(count);
-                    //System.out.println(stack[count]);
-                    //System.out.println(stack[count]);
                     sentence+=stack[count];
                 }
-                //System.out.println(sentence);
                 if(is_ok(sentence)){
                     System.out.println("R");
                     k=j+1;
