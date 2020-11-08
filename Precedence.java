@@ -51,11 +51,11 @@ public class Precedence {
         int k=1,j;
         stack[k]='#';
         for (int i = 0; i < input.length; i++) {
-            if(get_index(stack[i])>=0&&get_index(stack[i])<=5){
+            if(get_index(stack[k])>=0&&get_index(stack[k])<=5){
                 j=k;
             }
             else {
-                if (get_index(stack[i]) == 6){
+                if (get_index(stack[k]) == 6){
                     j=k-1;
                 }
                 else {
