@@ -64,28 +64,28 @@ public class Precedence {
             int judge=table[get_index(stack[j])][get_index(input[i])];
             while (judge==1){
                 while (true){
-                    System.out.println("???");
-                    System.out.println(j);
+                    //System.out.println("???");
+                    //System.out.println(j);
                     char tmp=stack[j];
-                    if(stack[j-1]>=0&&stack[j-1]<=5){
+                    if(get_index(stack[j-1])>=0&&get_index(stack[j-1])<=5){
                         j=j-1;
                     }
                     else {
                         j=j-2;
                     }
                     if(table[get_index(stack[j])][get_index(tmp)]==2){
-                        System.out.println(stack[j]);
-                        System.out.println(tmp);
-                        System.out.println(j);
+                        //System.out.println(stack[j]);
+                        //System.out.println(tmp);
+                        //System.out.println(j);
                         break;
                     }
                 }
                 String sentence="";
                 for(int count=j+1;count<=k;count++){
 
-                    System.out.println("!!!");
-                    System.out.println(count);
-                    System.out.println(stack[count]);
+                    //System.out.println("!!!");
+                    //System.out.println(count);
+                    //System.out.println(stack[count]);
                     //System.out.println(stack[count]);
                     sentence+=stack[count];
                 }
